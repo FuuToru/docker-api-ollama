@@ -1,0 +1,22 @@
+services:
+  web:
+    build: fastapi
+    ports:
+      - 8000:8000
+    restart: always
+    volumes:
+      - ./fastapi:/app
+    container_name: fastapi
+  ollama:
+    build: ollama
+    ports:
+      - 11434:11434
+    restart: always
+    container_name: ollama
+    volumes:
+      - ollama_volume:/root/.ollama
+    entrypoint: ["/usr/bin/bash", "/pull-llama3.sh"]
+
+volumes:
+  ollama_volume:
+
