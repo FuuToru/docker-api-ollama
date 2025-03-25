@@ -31,8 +31,8 @@ fuutoru-docker-api-ollama/
 
 1. **Sao chép kho lưu trữ**:
    ```bash
-   git clone https://github.com/yourusername/fuutoru-docker-api-ollama.git
-   cd fuutoru-docker-api-ollama
+   git clone https://github.com/fuutoru/docker-api-ollama.git
+   cd docker-api-ollama
    ```
 
 2. **Xây dựng và chạy dịch vụ**:
