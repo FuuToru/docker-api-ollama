@@ -1,7 +1,3 @@
-Dưới đây là phiên bản README.md chuyên nghiệp bằng tiếng Việt dành cho dự án của bạn trên GitHub:
-
----
-
 # Fuutoru Docker API Ollama
 
 Ứng dụng nhẹ được đóng gói bằng Docker, tích hợp FastAPI và Ollama để phân tích cảm xúc của văn bản liên quan đến tập đoàn "ggroup". Dự án sử dụng mô hình `llama3.2:1b` để phân loại cảm xúc thành ba nhãn: Trung lập (NEU), Tích cực (POS), và Tiêu cực (NEG).
