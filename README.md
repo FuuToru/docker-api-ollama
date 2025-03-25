@@ -1,6 +1,6 @@
-# Fuutoru Docker API Ollama
+# Docker API Ollama
 
-Ứng dụng nhẹ được đóng gói bằng Docker, tích hợp FastAPI và Ollama để phân tích cảm xúc của văn bản liên quan đến tập đoàn "ggroup". Dự án sử dụng mô hình `llama3.2:1b` để phân loại cảm xúc thành ba nhãn: Trung lập (NEU), Tích cực (POS), và Tiêu cực (NEG).
+Ứng dụng nhẹ được đóng gói bằng Docker, tích hợp FastAPI và Ollama để phân tích cảm xúc của văn bản. Dự án sử dụng mô hình `llama3.2:1b` để phân loại cảm xúc thành ba nhãn: Trung lập (NEU), Tích cực (POS), và Tiêu cực (NEG).
 
 ## Cấu trúc dự án
 
@@ -62,21 +62,21 @@ fuutoru-docker-api-ollama/
 2. **Phân tích cảm xúc**:
    - **Điểm cuối**: `GET /ask?prompt=<văn-bản-của-bạn>`
    - **Phản hồi**: Một trong `NEU`, `POS`, hoặc `NEG`
-   - **Mô tả**: Phân tích cảm xúc của văn bản được cung cấp liên quan đến "ggroup".
+   - **Mô tả**: Phân tích cảm xúc của văn bản được cung cấp.
 
    Ví dụ:
    ```bash
-   curl "http://localhost:8000/ask?prompt=Tập%20đoàn%20ggroup%20rất%20tuyệt%20vời"
+   curl "http://localhost:8000/ask?prompt=rất%20tuyệt%20vời"
    ```
    Phản hồi: `POS`
 
 ### Ví dụ minh họa
 
-- Đầu vào: `"Tập đoàn ggroup hoạt động kém hiệu quả"`
+- Đầu vào: `"kém hiệu quả"`
   - Đầu ra: `NEG`
-- Đầu vào: `"Tôi không có ý kiến gì về tập đoàn ggroup"`
+- Đầu vào: `"Tôi không có ý kiến gì"`
   - Đầu ra: `NEU`
-- Đầu vào: `"Tập đoàn ggroup đang phát triển mạnh mẽ"`
+- Đầu vào: `"đang phát triển mạnh mẽ"`
   - Đầu ra: `POS`
 
 ## Cấu hình
@@ -117,6 +117,3 @@ Dự án này được cấp phép theo Giấy phép MIT. Xem tệp [LICENSE](LI
 - [FastAPI](https://fastapi.tiangolo.com/) cho framework web.
 - [Ollama](https://ollama.ai/) cho việc cung cấp mô hình `llama3.2:1b` và môi trường chạy.
 
----
-
-Phiên bản này được viết bằng tiếng Việt, rõ ràng và chuyên nghiệp, phù hợp để sử dụng trên GitHub. Hãy thay `yourusername` trong URL clone bằng tên người dùng GitHub thực tế của bạn. Nếu bạn muốn điều chỉnh thêm, hãy cho tôi biết!
