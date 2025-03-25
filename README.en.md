@@ -31,8 +31,8 @@ fuutoru-docker-api-ollama/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/fuutoru-docker-api-ollama.git
-   cd fuutoru-docker-api-ollama
+   git clone https://github.com/fuutoru/docker-api-ollama.git
+   cd docker-api-ollama
    ```
 
 2. **Build and run the services**:
