@@ -17,7 +17,7 @@ def home():
 @app.get('/ask')
 def ask(prompt: str):
     res = requests.post('http://ollama:11434/api/generate', json={
-        "prompt": f"""Hãy phân tích cảm xúc của câu sau về tập đoàn ggroup và chỉ trả về một trong ba nhãn sau mà không in thêm bất kỳ nội dung nào khác:
+        "prompt": f"""Hãy phân tích cảm xúc của câu sau và chỉ trả về một trong ba nhãn sau mà không in thêm bất kỳ nội dung nào khác:
             - NEU (Trung lập)
             - POS (Tích cực)
             - NEG (Tiêu cực)
