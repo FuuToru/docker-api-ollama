@@ -1,6 +1,6 @@
-# Fuutoru Docker API Ollama
+# Docker API Ollama
 
-A lightweight Dockerized application integrating FastAPI and Ollama for sentiment analysis of text related to the "ggroup" corporation. The project uses the `llama3.2:1b` model to classify sentiments into three categories: Neutral (NEU), Positive (POS), and Negative (NEG).
+A lightweight Dockerized application integrating FastAPI and Ollama for sentiment analysis of text. The project uses the `llama3.2:1b` model to classify sentiments into three categories: Neutral (NEU), Positive (POS), and Negative (NEG).
 
 ## Project Structure
 
@@ -62,21 +62,21 @@ fuutoru-docker-api-ollama/
 2. **Sentiment Analysis**:
    - **Endpoint**: `GET /ask?prompt=<your-text>`
    - **Response**: One of `NEU`, `POS`, or `NEG`
-   - **Description**: Analyzes the sentiment of the provided text related to "ggroup".
+   - **Description**: Analyzes the sentiment of the provided text.
 
    Example:
    ```bash
-   curl "http://localhost:8000/ask?prompt=Tập%20đoàn%20ggroup%20rất%20tuyệt%20vời"
+   curl "http://localhost:8000/ask?prompt=rất%20tuyệt%20vời"
    ```
    Response: `POS`
 
 ### Example Scenarios
 
-- Input: `"Tập đoàn ggroup hoạt động kém hiệu quả"`
+- Input: `"hoạt động kém hiệu quả"`
   - Output: `NEG`
-- Input: `"Tôi không có ý kiến gì về tập đoàn ggroup"`
+- Input: `"Tôi không có ý kiến gì"`
   - Output: `NEU`
-- Input: `"Tập đoàn ggroup đang phát triển mạnh mẽ"`
+- Input: `"đang phát triển mạnh mẽ"`
   - Output: `POS`
 
 ## Configuration
@@ -117,6 +117,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [FastAPI](https://fastapi.tiangolo.com/) for the web framework.
 - [Ollama](https://ollama.ai/) for providing the `llama3.2:1b` model and runtime.
 
----
-
-This README provides a clear overview of your project, instructions for setup and usage, and additional details to help contributors or users understand its purpose and functionality. Replace `yourusername` in the clone URL with your actual GitHub username. Let me know if you'd like to adjust anything!
